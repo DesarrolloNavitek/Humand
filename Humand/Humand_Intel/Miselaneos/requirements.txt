@@ -1,4 +1,0 @@
-pyodbc
-requests
-python-dotenv
-tzdata
