@@ -1,0 +1,54 @@
+
+[Dialogo]
+Clave=nvk_ProcesarIncidenciasQuincenal
+Nombre=Precaución
+Icono=5
+TipoMensaje=General
+TipoDialogo=Mensaje
+Modulos=(Todos)
+Fuente={Tahoma, 8, Negro, []}
+AccionesTamanoBoton=15x5
+AccionesDerecha=S
+VentanaTipoMarco=Normal
+VentanaPosicionInicial=Por diseño
+VentanaExclusiva=S
+VentanaEstadoInicial=Normal
+VentanaExclusivaOpcion=0
+ExpresionesAlMostrar=Asigna(Temp.Texto,Info.Empresa)<BR>Asigna(Temp.TextoTemp01,Info.Usuario)
+
+ListaAcciones=(Lista)
+PosicionInicialIzquierda=610
+PosicionInicialArriba=457
+PosicionInicialAlturaCliente=85
+PosicionInicialAncho=500
+Mensaje=<T>¿Procesar los registros Quincenales de Humand en Intelisis?<T>
+[Acciones.Generar]
+Nombre=Generar
+Boton=0
+NombreDesplegar=&Generar
+EnBarraAcciones=S
+TipoAccion=Ventana
+ClaveAccion=Cerrar
+Activo=S
+Antes=S
+AntesExpresiones=ProcesarSQL( <T>EXEC nvk_sp_InsertaIncidencias_Quincenal :tEmp, :tSem, :tQuin, :tUsu<T>, Temp.Texto, NULO, NULO, Temp.TextoTemp01 )
+Visible=S
+
+[Acciones.Salir]
+Nombre=Salir
+Boton=0
+NombreDesplegar=&Salir
+EnBarraAcciones=S
+TipoAccion=Ventana
+ClaveAccion=Cancelar
+Activo=S
+Visible=S
+
+
+
+
+
+[Dialogo.ListaAcciones]
+(Inicio)=Generar
+Generar=Salir
+Salir=(Fin)

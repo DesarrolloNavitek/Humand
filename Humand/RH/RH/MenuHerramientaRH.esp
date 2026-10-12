@@ -1,0 +1,37 @@
+[MENUHERRAMIENTARH.DLG/Dialogo]
+PosicionInicialAncho=386
+PosicionInicialIzquierda=767
+PosicionInicialArriba=409
+PosicionInicialAlturaCliente=186
+
+[MENUHERRAMIENTARH.DLG/Dialogo.ListaAcciones]
+AsistenteHorarioEntrada=AsistenteIncidenciasHumandSemanal
+AsistenteIncidenciasHumandSemanal=AsistenteIncidenciasHumandQuincenal
+AsistenteIncidenciasHumandQuincenal=(Fin)
+
+[MENUHERRAMIENTARH.DLG/Acciones.AsistenteIncidenciasHumandQuincenal]
+Nombre=AsistenteIncidenciasHumandQuincenal
+Boton=0
+NombreDesplegar=Asistente Incidencias Humand Quincenal
+EnMenu=S
+EnBarraAcciones=S
+TipoAccion=Dialogos
+ClaveAccion=nvk_ProcesarIncidenciasQuincenal
+Activo=S
+Visible=S
+EspacioPrevio=S
+EnWeb=S
+
+[MENUHERRAMIENTARH.DLG/Acciones.AsistenteIncidenciasHumandSemanal]
+Nombre=AsistenteIncidenciasHumandSemanal
+Boton=0
+NombreDesplegar=Asistente Incidencias Humand Senamal
+EnMenu=S
+EnBarraAcciones=S
+EspacioPrevio=S
+EnWeb=S
+TipoAccion=Dialogos
+ClaveAccion=nvk_ProcesarIncidenciasSemanal
+Activo=S
+Visible=S
+

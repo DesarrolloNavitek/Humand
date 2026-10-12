@@ -1,0 +1,543 @@
+
+----------------------------------------------------------
+     VARIABLES.CFG
+----------------------------------------------------------
+[Variables]
+ListaVariables=Info.MesLanzamiento<BR>Info.MesNumeroLote<BR>Info.TipoArticuloMes<BR>Info.Variante<BR>Info.Requi<BR>Info.ListaPreciosEspecifica<BR>Info.FechaARequerida<BR>Info.FechaDRequerida<BR>Info.FechaAAutoriza<BR>Info.FechaDAutiza<BR>Info.AgenteFam<BR>Info.S1<BR>Info.S2<BR>Info.S3<BR>Info.S4<BR>Info.Presentar<BR>Info.Sec1<BR>Info.POrdenarPor<BR>Info.Negativos<BR>Info.CteInactivos<BR>Info.PaisAn<BR>Info.EstadoAn<BR>Info.LocalidadAn<BR>Info.FPedidoA<BR>Info.FPedidoD<BR>Info.FVencimientoA<BR>Info.FVencimientoD<BR>Info.FGeneracionA<BR>Info.FGeneracionD<BR>Info.ADocumento<BR>Info.DDocumento<BR>Info.TiposCtes<BR>Info.DivsionCte<BR>Info.Estatt<BR>Info.EGVAgenteGrupo<BR>Navitek.Opcion<BR>Info.TipoPer<BR>Info.NoPeriodo<BR>Info.TarimaA<BR>Info.TarimaD<BR>Info.NaviSiNo<BR>Info.NaviEjecSiNo<BR>Info.NaviGteSiNo<BR>Info.NaviEliminaSiNo<BR>Info.CteTipoCondicion<BR>Info.DesglosarCte<BR>Info.Semana<BR>Info.PeriodoDnavitek<BR>Info.PeriodoAnavitek<BR>Info.nvk_Quincena
+ListaGrupos=Navitek
+
+[Info.nvk_Quincena]
+Grupo=Info
+Clave=nvk_Quincena
+Tipo=Numérico
+Nombre=Quincena
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR>15<BR>16<BR>17<BR>18<BR>19<BR>20<BR>21<BR>22<BR>23<BR>24
+OpcionesPredefinidas=Ninguna
+ValorInicial=1
+
+
+[Info.MesLanzamiento]
+Grupo=Info
+Clave=MesLanzamiento
+Tipo=Numérico
+Nombre=Lanzamiento
+Tamano=20
+AyudaEnCaptura=Vista
+OpcionesPredefinidas=Ninguna
+Forma=MesLanzamientoLista
+Vista=MesLanzamientoLista
+Campo=Lanzamiento
+
+[Info.TipoArticuloMes]
+Grupo=Info
+Clave=TipoArticuloMes
+Tipo=Texto
+Nombre=Tipo Artículo
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=TipoArticuloMES
+Vista=TipoArticuloMES
+Campo=TipoArticuloMES.Codigo
+OpcionesPredefinidas=Ninguna
+
+[Info.Variante]
+Grupo=Info
+Clave=Variante
+Tipo=Texto
+Nombre=Variante
+Tamano=50
+AyudaEnCaptura=No
+OpcionesPredefinidas=Ninguna
+Mayusculas=S
+
+[Info.Requi]
+Grupo=Info
+Clave=Requi
+Tipo=Numérico
+Nombre=Requisicion
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=Requisicion
+Vista=Requisicion
+Campo=Compra.ID
+OpcionesPredefinidas=Ninguna
+
+[Info.ListaPreciosEspecifica]
+Grupo=Info
+Clave=ListaPreciosEspecifica
+Tipo=Texto
+Nombre=ListaPreciosEspecifica
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=ListaPrecios
+Vista=ListaPrecios
+Campo=ListaPrecios.Lista
+OpcionesPredefinidas=Ninguna
+
+[Info.FechaARequerida]
+Grupo=Info
+Clave=FechaARequerida
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(UltimoDiaMes(FechaTrabajo))
+Nombre=A la fecha requerida
+Tamano=20
+AyudaEnCaptura=Calendario sin Hora
+OpcionesPredefinidas=Ninguna
+
+[Info.FechaDRequerida]
+Grupo=Info
+Clave=FechaDRequerida
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(PrimerDiaMes(FechaTrabajo))
+Nombre=De la fecha requerida
+Tamano=20
+AyudaEnCaptura=Calendario sin Hora
+OpcionesPredefinidas=Ninguna
+
+[Info.FechaAAutoriza]
+Grupo=Info
+Clave=FechaAAutoriza
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(UltimoDiaMes(FechaTrabajo))
+Nombre=A la fecha autoriza
+Tamano=20
+AyudaEnCaptura=Calendario sin Hora
+OpcionesPredefinidas=Ninguna
+
+[Info.FechaDAutiza]
+Grupo=Info
+Clave=FechaDAutiza
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(PrimerDiaMes(FechaTrabajo))
+Nombre=De la fecha Autoriza
+Tamano=20
+AyudaEnCaptura=Calendario sin Hora
+OpcionesPredefinidas=Ninguna
+
+[Info.AgenteFam]
+Grupo=Info
+Clave=AgenteFam
+Tipo=Texto
+Nombre=Gerente
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=AgenteFamLista
+Vista=AgenteFam
+Campo=AgenteFam.Familia
+OpcionesPredefinidas=Ninguna
+
+[Info.S1]
+Grupo=Info
+Clave=S1
+Tipo=Texto
+Nombre=Resultado Ventas
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Si - No
+
+[Info.S2]
+Grupo=Info
+Clave=S2
+Tipo=Texto
+Nombre=Pedidos No Auto.
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Si - No
+
+[Info.S3]
+Grupo=Info
+Clave=S3
+Tipo=Texto
+Nombre=No Surtidos
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Si - No
+
+[Info.S4]
+Grupo=Info
+Clave=S4
+Tipo=Texto
+Nombre=Vencimiento Cobr
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Si - No
+
+[Info.Presentar]
+Grupo=Info
+Clave=Presentar
+Tipo=Texto
+Nombre=Presentar
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Cantidades<BR>Importes
+OpcionesUnicamente=S
+OpcionesPredefinidas=Ninguna
+
+[Info.Sec1]
+Grupo=Info
+Clave=Sec1
+Tipo=Texto
+Nombre=Resultado Ventas
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Si - No
+
+[Info.POrdenarPor]
+Grupo=Info
+Clave=POrdenarPor
+Tipo=Texto
+Nombre=Ordenar Por
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Fecha de Entrga<BR>División
+OpcionesPredefinidas=Ninguna
+
+[Info.Negativos]
+Grupo=Info
+Clave=Negativos
+Tipo=Texto
+Nombre=Solo Cte Negativos
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Si - No
+
+[Info.CteInactivos]
+Grupo=Info
+Clave=CteInactivos
+Tipo=Texto
+Nombre=Incluir Cte Inactivos
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Si - No
+
+[Info.PaisAn]
+Grupo=Info
+Clave=PaisAn
+Tipo=Texto
+Nombre=Pais
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=SATPaisLista
+Vista=SATPais
+Campo=SATPais.Descripcion
+OpcionesPredefinidas=Ninguna
+
+[Info.EstadoAn]
+Grupo=Info
+Clave=EstadoAn
+Tipo=Texto
+Nombre=Estado
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=SATEstadoLista
+Vista=SATEstado
+Campo=SATEstado.Descripcion
+OpcionesPredefinidas=Ninguna
+
+[Info.LocalidadAn]
+Grupo=Info
+Clave=LocalidadAn
+Tipo=Texto
+Nombre=Localidad
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=SATMunicipioLista
+Vista=SATMunicipio
+Campo=SATMunicipio.Descripcion
+OpcionesPredefinidas=Ninguna
+
+[Info.FPedidoA]
+Grupo=Info
+Clave=FPedidoA
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(UltimoDiaMes(FechaTrabajo))
+Nombre=A la fecha del pedido
+Tamano=20
+AyudaEnCaptura=Calendario
+OpcionesPredefinidas=Ninguna
+
+[Info.FPedidoD]
+Grupo=Info
+Clave=FPedidoD
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(PrimerDiaMes(FechaTrabajo))
+Nombre=De la fecha del pedido
+Tamano=20
+AyudaEnCaptura=Calendario
+OpcionesPredefinidas=Ninguna
+
+[Info.FVencimientoA]
+Grupo=Info
+Clave=FVencimientoA
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(UltimoDiaMes(FechaTrabajo))
+Nombre=A la fecha de vencimiento
+Tamano=20
+AyudaEnCaptura=Calendario
+OpcionesPredefinidas=Ninguna
+
+[Info.FVencimientoD]
+Grupo=Info
+Clave=FVencimientoD
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(PrimerDiaMes(FechaTrabajo))
+Nombre=De la fecha de Vencimiento
+Tamano=20
+AyudaEnCaptura=Calendario
+OpcionesPredefinidas=Ninguna
+
+[Info.FGeneracionA]
+Grupo=Info
+Clave=FGeneracionA
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(UltimoDiaMes(FechaTrabajo))
+Nombre=A la fecha de generacion
+Tamano=20
+AyudaEnCaptura=Calendario
+OpcionesPredefinidas=Ninguna
+
+[Info.FGeneracionD]
+Grupo=Info
+Clave=FGeneracionD
+Tipo=Fecha/Hora
+ValorInicial=FechaDMA(PrimerDiaMes(FechaTrabajo))
+Nombre=De la fecha de Generacion
+Tamano=20
+AyudaEnCaptura=Calendario
+OpcionesPredefinidas=Ninguna
+
+[Info.ADocumento]
+Grupo=Info
+Clave=ADocumento
+Tipo=Texto
+Nombre=Al documento
+Tamano=20
+AyudaEnCaptura=No
+OpcionesPredefinidas=Ninguna
+
+[Info.DDocumento]
+Grupo=Info
+Clave=DDocumento
+Tipo=Texto
+Nombre=Del documento
+Tamano=20
+AyudaEnCaptura=No
+OpcionesPredefinidas=Ninguna
+
+[Info.TiposCtes]
+Grupo=Info
+Clave=TiposCtes
+Tipo=Texto
+Nombre=TiposCtes
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=CteCatLista
+Vista=CteCat
+Campo=CteCat.Categoria
+OpcionesPredefinidas=Ninguna
+
+[Info.DivsionCte]
+Grupo=Info
+Clave=DivsionCte
+Tipo=Texto
+Nombre=DivsionCte
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=CteGrupoLista
+Vista=CteGrupo
+Campo=CteGrupo.Grupo
+OpcionesPredefinidas=Ninguna
+
+[Info.Estatt]
+Grupo=Info
+Clave=Estatt
+Tipo=Texto
+Nombre=Estatt
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=ALTA<BR>BAJA
+OpcionesPredefinidas=Ninguna
+
+[Info.EGVAgenteGrupo]
+Grupo=Info
+Clave=EGVAgenteGrupo
+Tipo=Texto
+Nombre=Agente Grupo
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=AgenteGrupo
+Vista=AgenteGrupo
+Campo=AgenteGrupo.Grupo
+OpcionesPredefinidas=Ninguna
+
+[Navitek.Opcion]
+Grupo=Navitek
+Clave=Opcion
+Tipo=Texto
+Nombre=Filtro
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Agente<BR>Artículo<BR>Documento<BR>Cantidades<BR>Cliente
+OpcionesPredefinidas=Ninguna
+
+[Info.TipoPer]
+Grupo=Info
+Clave=TipoPer
+Tipo=Texto
+Nombre=TipoPeriodo
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Quincenal<BR>Semanal
+OpcionesPredefinidas=Ninguna
+
+[Info.NoPeriodo]
+Grupo=Info
+Clave=NoPeriodo
+Tipo=Numérico
+Nombre=NoPeriodo
+Tamano=20
+AyudaEnCaptura=Calculadora
+OpcionesPredefinidas=Ninguna
+
+[Info.TarimaA]
+Grupo=Info
+Clave=TarimaA
+Tipo=Texto
+Nombre=A Tarima
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=Tarima
+Vista=Tarima
+Campo=Tarima.Tarima
+OpcionesPredefinidas=Ninguna
+
+[Info.TarimaD]
+Grupo=Info
+Clave=TarimaD
+Tipo=Texto
+Nombre=De Tarima
+Tamano=20
+AyudaEnCaptura=Vista
+Forma=Tarima
+Vista=Tarima
+Campo=Tarima.Tarima
+OpcionesPredefinidas=Ninguna
+
+[Info.NaviSiNo]
+Grupo=Info
+Clave=NaviSiNo
+Tipo=Texto
+Nombre=Selecciona
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=S
+OpcionesPredefinidas=Ninguna
+ListaOpciones=Si<BR>No
+
+[Info.NaviEjecSiNo]
+Grupo=Info
+Clave=NaviEjecSiNo
+Tipo=Texto
+Nombre=Ejec. Libera
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Si<BR>No
+OpcionesUnicamente=S
+OpcionesPredefinidas=Ninguna
+
+[Info.NaviGteSiNo]
+Grupo=Info
+Clave=NaviGteSiNo
+Tipo=Texto
+Nombre=Gte.Libera
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Si<BR>No
+OpcionesUnicamente=S
+OpcionesPredefinidas=Ninguna
+
+[Info.NaviEliminaSiNo]
+Grupo=Info
+Clave=NaviEliminaSiNo
+Tipo=Texto
+Nombre=Eliminar
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Si<BR>No
+OpcionesUnicamente=S
+OpcionesPredefinidas=Ninguna
+
+[Info.CteTipoCondicion]
+Grupo=Info
+Clave=CteTipoCondicion
+Tipo=Texto
+Nombre=Tipo Condicion
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+ListaOpciones=Contado<BR>Credito
+OpcionesPredefinidas=Ninguna
+
+[Info.DesglosarCte]
+Grupo=Info
+Clave=DesglosarCte
+Tipo=Texto
+Nombre=Desglosar Cte
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesPredefinidas=Si - No
+
+[Info.Semana]
+Grupo=Info
+Clave=Semana
+Tipo=Numérico
+Nombre=Semana
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesUnicamente=N
+OpcionesMostrarLista=N
+OpcionesPredefinidas=Ninguna
+ListaOpciones=1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR>15<BR>16<BR>17<BR>18<BR>19<BR>20<BR>21<BR>22<BR>23<BR>24<BR>25<BR>26<BR>27<BR>28<BR>29<BR>30<BR>31<BR>32<BR>33<BR>34<BR>35<BR>36<BR>37<BR>38<BR>39<BR>40<BR>41<BR>42<BR>43<BR>44<BR>45<BR>46<BR>47<BR>48<BR>49<BR>50<BR>51<BR>52<BR>53
+
+[Info.PeriodoDnavitek]
+Grupo=Info
+Clave=PeriodoDnavitek
+Tipo=Numérico
+ValorInicial=
+Nombre=Del Periodo
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesPredefinidas=Ninguna
+ListaOpciones=1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13
+OpcionesUnicamente=S
+
+[Info.PeriodoAnavitek]
+Grupo=Info
+Clave=PeriodoAnavitek
+Tipo=Numérico
+ValorInicial=
+Nombre=Al Periodo
+Tamano=20
+AyudaEnCaptura=Lista de Opciones
+OpcionesPredefinidas=Ninguna
+ListaOpciones=1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13
+OpcionesUnicamente=S
+
+[Info.MesNumeroLote]
+Grupo=Info
+Clave=MesNumeroLote
+Tipo=Texto
+Nombre=Numero-Lote
+Tamano=50
+AyudaEnCaptura=No
+OpcionesPredefinidas=SQLEnLista('SELECT NumeroLote FROM IPNavitek.dbo.TLotfabr WHERE lanzamiento=:nLanzamiento', Info.MesLanzamiento)
+ValorInicial=
+OpcionesUnicamente=S
+
