@@ -394,7 +394,7 @@ BEGIN
 
         -- Los retardos menores ahora se acumulan por PERIODO: 3 (o 4) en la
         -- semana/quincena = 1 unidad. Antes se evaluaban por día y nunca llegaban al umbral.
-        SELECT Regla, SucursalTrabajo, Personal, Referencia,
+        SELECT Regla, SucursalTrabajo, Personal, Referencia,Fecha, -- se agrega fecha para colocar en detalle
                Total    = SUM(Valor),
                Cantidad = CASE WHEN MAX(Divisor) IS NOT NULL THEN SUM(Valor) / MAX(Divisor) ELSE SUM(Valor) END,
                Renglon  = CAST(NULL AS int),
@@ -467,7 +467,7 @@ BEGIN
 
             INSERT INTO NominaD
                   (ID, Renglon, Modulo, Personal, Horas, Cantidad, Referencia, FechaD, Activo, Sucursal, SucursalOrigen)
-            SELECT @IDGenera, Renglon, 'NOM', Personal, '01:00', Cantidad, Referencia, @Hoy, 1, 0, 0
+            SELECT @IDGenera, Renglon, 'NOM', Personal, '01:00', Cantidad, '', Fecha/*@Hoy*/, 1, 0, 0
               FROM #Grupos
              WHERE Regla = @Regla AND SucursalTrabajo = @Sucursal
 
