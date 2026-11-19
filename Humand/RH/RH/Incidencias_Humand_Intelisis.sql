@@ -401,7 +401,7 @@ BEGIN
                NominaID = CAST(NULL AS int)
           INTO #Grupos
           FROM #FuenteRegla
-         GROUP BY Regla, SucursalTrabajo, Personal, Referencia
+         GROUP BY Regla, SucursalTrabajo, Personal, Referencia,Fecha
         HAVING SUM(Valor) >= ISNULL(MAX(Divisor), MAX(Umbral))
 
         ;WITH R AS (
